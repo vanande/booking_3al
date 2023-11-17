@@ -97,7 +97,7 @@ export class BookingsService {
           HttpStatus.FORBIDDEN,
         );
       }
-      this.bookingRepository.delete(id);
+      await this.bookingRepository.delete(id);
     } catch (error) {
       throw error;
     }
