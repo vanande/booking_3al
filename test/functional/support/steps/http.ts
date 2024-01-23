@@ -30,6 +30,10 @@ When('I GET {string}', async function (this, url: string) {
   this.res = await request(this.app.getHttpServer()).get(url);
 });
 
+When('I DELETE {string}', async function (this, url: string) {
+  this.res = await request(this.app.getHttpServer()).delete(url);
+});
+
 Then('response status is {string}', async function (this, code: string) {
   expect(this.res.status).to.equal(parseInt(code));
 });
