@@ -14,3 +14,7 @@ Feature: Operation for rooms
     Scenario: Get rooms
         When I GET "/rooms"
         Then response status is "200"
+
+    Scenario: Get rooms
+        When I GET "/roomss"
+        Then response status is not "200"
